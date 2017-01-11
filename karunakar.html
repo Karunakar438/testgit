@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration form</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all">
+<script>
+function validateForm() {
+    var a = document.forms["myForm"]["fname"].value;
+    var b = document.forms["myForm"]["lname"].value;
+    var c = document.forms["myForm"]["gender"].value;
+    var d = document.getElementById("location").value;
+	
+    if (a == ""|| b == "" || c == "" || d == "0") {
+        alert("Name must be filled out");
+        return false;
+    }
+	
+}
+
+    			function redirect()
+    			{
+    				
+    				window.location = "home.html";
+    			}
+                    
+
+
+</script>
+</head>
+   <body>
+     <div id="form_wrapper">
+       <h2>Registration form</h2>
+
+	<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		<p class ="field"> Frist Name  <input type="text" name="fname"></p>
+		
+       
+		<p class ="field"> Last Name  <input type="text" name="lname"></p>
+
+
+                <p class ="Gender">
+
+   			Gender <input type="radio" name="gender" id=""  value="Male" >Male
+    			  <input type="radio" name="gender" id=""  value="Female" >Female
+  		 	  
+		</p>
+		<p class ="sel">
+			Location         <select id ="location">
+				<option value = "0">Choose Your Location</option>
+				<option value = "1">Hyderabad</option>
+				<option value = "2">warangal</option>
+				<option value = "3">shanthi nager</option>
+				<option value = "4">kp</option>
+				<option value = "5">ameerpet</option>
+				<option value = "6">pune</option>
+				<option value = "7">chennai</option>
+			</select>
+		</p>
+                <input type="submit" value="Submit">
+		<button id="red" onClick="redirect()">button</button>
+	</form>
+    </div>
+   </body>
+</html>
